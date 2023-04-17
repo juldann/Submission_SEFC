@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>My Website</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+  <header id="header" class="fixed-top d-flex align-items-center ">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="logo">
+        <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
+      </div>
+      <nav id="navbar" class="navbar">
+              <nav id="navbar" class="navbar">
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="profile.html">Our Profile</a></li>
+                  <li><a href="achievement.html">Achievement</a></li>
+                  <li><a class="active " href="message.html">Message Us</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+              </nav>
+    </div>
+<script>
+		function validateForm() {
+			// Get form elements
+			var name = document.forms["messageForm"]["name"].value;
+			var birthDate = document.forms["messageForm"]["birthDate"].value;
+			var gender = document.forms["messageForm"]["gender"].value;
+			var message = document.forms["messageForm"]["message"].value;
+
+			// Validate form
+			if (name == "" || birthDate == "" || gender == "" || message == "") {
+				document.getElementById("error-msg").innerHTML = "Please fill all fields!";
+				return false;
+			} 
+		}
+
+		function showMessage() {
+			// Get form values
+			var name = document.forms["messageForm"]["name"].value;
+			var birthDate = document.forms["messageForm"]["birthDate"].value;
+			var gender = document.forms["messageForm"]["gender"].value;
+			var message = document.forms["messageForm"]["message"].value;
+
+			// Display form values
+			var messageBox = document.getElementById("message-box");
+			messageBox.innerHTML += "<strong>Name:</strong> " + name + "<br>" +
+									"<strong>Birth Date:</strong> " + birthDate + "<br>" +
+									"<strong>Gender:</strong> " + gender + "<br>" +
+									"<strong>Message:</strong> " + message + "<br><br>";
+		}
+	</script>
+
+  </header>
+<br>
+<div class="container">
+  <h1>Message Us Form</h1>
+      <form name="messageForm" onsubmit="return validateForm()">
+        <br>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      <br>
+        <label for="birthDate">Birth Date:</label>
+        <input type="date" id="birthDate" name="birthDate" required>
+      <br>
+        <label for="gender">Gender:</label>
+        <input type="radio" id="male" name="gender" value="Male" required>
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label>
+      <br>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        <p id="error-msg"></p>
+      <br>
+		<input type="submit" value="Submit" onclick="showMessage()">
+	</form>
+	<div id="message-box"></div>
+</div>
+  <main id="main">
+  </main>
+
+
+  <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>M-Juldan-Naufal</span></strong>. All Rights Reserved
+      </div>
+    </div>
+  </footer>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/js/main.js"></script>
+  </body>
+  </html>
